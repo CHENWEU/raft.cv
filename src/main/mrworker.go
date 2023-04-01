@@ -11,10 +11,8 @@ package main
 //
 
 import "../mr"
-import "plugin"
 import "os"
 import "fmt"
-import "log"
 
 func main() {
 	if len(os.Args) != 2 {
@@ -31,7 +29,7 @@ func main() {
 // load the application Map and Reduce functions
 // from a plugin file, e.g. ../mrapps/wc.so
 //
-func loadPlugin(filename string) (func(string, string) []mr.KeyValue, func(string, []string) string) {
+/*func loadPlugin(filename string) (func(string, string) []mr.KeyValue, func(string, []string) string) {
 	p, err := plugin.Open(filename)
 	if err != nil {
 		log.Fatalf("cannot load plugin %v", filename)
@@ -48,4 +46,4 @@ func loadPlugin(filename string) (func(string, string) []mr.KeyValue, func(strin
 	reducef := xreducef.(func(string, []string) string)
 
 	return mapf, reducef
-}
+}*/
